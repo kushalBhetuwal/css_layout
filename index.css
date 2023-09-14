@@ -1,22 +1,93 @@
-p{
-    font-size:1.75rem;
-    margin:1.5rem;
-    padding:1rem;
-    border:2px solid black;
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Montserrat:ital,wght@0,300;0,500;0,800;1,200;1,400&family=Noto+Sans+Old+Permic&family=Noto+Serif:ital,wght@0,300;0,400;1,200&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+*{
+    box-sizing:border-box;
+}
+body{
+    padding:30px;
+    font-family: 'Noto Serif', serif;
+    background: #F7F8F8;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #ACBB78, #F7F8F8);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #ACBB78, #F7F8F8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+:root{
+    --border:3px solid black;
+}
+.brand{
+   font-weight: 300;
+   font-size:60px;
+   text-align:center;
 }
 
-body >p{
-    background-color:lightblue;
+.page{
+    display:grid;
+    grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "story-1 story-2 story-3"
+    "story-4 story-5 story-5" 
+}
+.brand-header{
+    grid-area:header;
+}
+.nav-links{
+    display:flex;
+    justify-content:space-around;
+    grid-area:nav;
+    list-style:none;
+    border:3px solid black;
+    padding:30px;
+    margin:0;
+}
+.section-link{
+    text-decoration: none;
+    font-size:1.8rem;
+    font-weight: 600;
+    color:#666;
+
 }
 
-#box{
-   position:fixed;
-    height:10rem;
-    width:15rem;
-    border:2px solid black;
-    background-color:lightgreen;
+.story-1{
+    grid-area:story-1;
+}
+.story-2{
+    grid-area:story-2;
+}
+.story-3{
+    grid-area:story-3;
+}
+.story-4{
+    grid-area:story-4;
+}
+.story-5{
+    grid-area:story-5;
+}
+.section-link:hover{
+    text-decoration:underline;
+}
+.story{
+    border-left:var(--border);
+    border-bottom:var(--border);
+    padding:20px;
+}
+.story-3, .story-5{
+    border-right:var(--border);
+}
+.article-title{
+    font-size:1.5rem;
+    text-align: center;
+    font-weight: 600;
+    font-style:italic;
+    text-decoration: underline;
+
+}
+.article-img{
+   display:block;
+   margin:0 auto;
+   height:250px;
+   width:auto;
 }
 
-#long{
-    background-color:lightyellow;
-}
+
+
